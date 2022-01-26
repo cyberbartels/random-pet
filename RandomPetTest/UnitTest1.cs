@@ -1,6 +1,6 @@
 using NUnit.Framework;
 
-namespace TestRandomPet
+namespace RandomPetTest
 {
     public class Tests
     {
