@@ -1,42 +1,31 @@
+using System;
 using NUnit.Framework;
-using RandomPetLib;
+using RandomPet;
 
 namespace RandomPetTest
 {
-    public class Tests
+    public class ConsoleTests
     {
-        PetGenerator petGenerator;
 
         [SetUp]
-        public void Setup()
+        public virtual void Setup()
         {
-            petGenerator = new PetGenerator(new string[]{ "cat", "dog" });
+
         }
 
         [Test]
-        public void CanCreateRandomPetGenerator()
+        public void ThrowsArgumentException()
         {
-            PetGenerator petGenerator = new PetGenerator(null);
+            Assert.Throws<ArgumentException>(() => RandomPet.RandomPet.Main(null));
+            Assert.Throws<ArgumentException>(() => RandomPet.RandomPet.Main(new string[2]));
+            Assert.Throws<ArgumentException>(() => RandomPet.RandomPet.Main(new string[3]));
         }
 
         [Test]
         public void CanCreateRandomPet()
         {
-            string myPet = petGenerator.NextPet();
-            Assert.IsNotNull(myPet);
-            Assert.IsNotEmpty(myPet);
-        }
-
-        [Test]
-        public void SuccessiveNameGenerationYieldsDifferentResults()
-        {
-            string myName = petGenerator.NextPet();
-            int i = 0;
-            int threshold = 100;
-            while (myName.Equals(petGenerator.NextPet()) && i <= threshold)
-                i++;
-            Assert.Greater(threshold, i, @"Could not generate new name with {0} tries", threshold);
-
+            string[] args = new string[0];
+            RandomPet.RandomPet.Main(args);
         }
     }
 }
