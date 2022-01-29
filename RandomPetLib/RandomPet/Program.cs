@@ -12,7 +12,7 @@ namespace RandomPet
             PetGenerator p = new PetGenerator();
             string petName = p.NextPet();
             Console.WriteLine($"::set-output name=petname::{petName}");
-           // Console.ReadKey();
+           // Console.ReadKey(); 
         }
     }
 }
