@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RandomPetLib\RandomPetLib\RandomPetLib.csproj" />
-    <ProjectReference Include="..\RandomPetLib\RandomPet\RandomPet.csproj" />
+    <ProjectReference Include="..\RandomPet\RandomPet.csproj" />
   </ItemGroup>
 
 </Project>
