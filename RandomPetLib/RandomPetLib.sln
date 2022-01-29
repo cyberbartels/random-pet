@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RandomPetLib", "RandomPetLi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RandomPetTest", "..\RandomPetTest\RandomPetTest.csproj", "{C19FA6BC-31F8-4DB0-83A4-3EC16F57966D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomPet", "RandomPet\RandomPet.csproj", "{AF5592CA-EBC5-421F-8B49-26B731A3685A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RandomPet", "..\RandomPet\RandomPet.csproj", "{1C8F4F19-C75C-4D08-8127-DBBF55E81642}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{C19FA6BC-31F8-4DB0-83A4-3EC16F57966D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C19FA6BC-31F8-4DB0-83A4-3EC16F57966D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C19FA6BC-31F8-4DB0-83A4-3EC16F57966D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AF5592CA-EBC5-421F-8B49-26B731A3685A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AF5592CA-EBC5-421F-8B49-26B731A3685A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AF5592CA-EBC5-421F-8B49-26B731A3685A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AF5592CA-EBC5-421F-8B49-26B731A3685A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C8F4F19-C75C-4D08-8127-DBBF55E81642}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C8F4F19-C75C-4D08-8127-DBBF55E81642}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C8F4F19-C75C-4D08-8127-DBBF55E81642}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C8F4F19-C75C-4D08-8127-DBBF55E81642}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
