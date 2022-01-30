@@ -1,5 +1,5 @@
-# Set the base image as the .NET 5.0 SDK (this includes the runtime)
-FROM mcr.microsoft.com/dotnet/sdk:5.0 as build-env
+# Set the base image as the .NET 3.1 SDK (this includes the runtime)
+FROM mcr.microsoft.com/dotnet/sdk:3.1 as build-env
 
 # Copy everything and publish the release (publish implicitly restores and builds)
 COPY . ./
