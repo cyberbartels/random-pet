@@ -2,7 +2,7 @@ name: '.NET random pet name'
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, GitHubAction ]
   workflow_dispatch:
     inputs:
       reason:
@@ -17,4 +17,4 @@ jobs:
     - uses: actions/checkout@v2
     - name: .NET Random Pet Name
       id: generate-name
-      uses: cyberbartels/random-pet/RandomPet@main #dotnet/samples/github-actions/DotNet.GitHubAction@main
+      uses: cyberbartels/random-pet/ #dotnet/samples/github-actions/DotNet.GitHubAction@main
