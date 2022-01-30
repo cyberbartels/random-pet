@@ -3,10 +3,17 @@ description: 'A Github action that creates an random pet name'
 branding:
   icon: sliders
   color: purple
+inputs:
+  alliteration:
+    description:
+      'A start character for pet name and attribute. x and z are excluded.'
+    required: false
 outputs:
   petname:
     description: 'The generated name.'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{ inputs.alliteration }}
   
