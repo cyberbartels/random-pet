@@ -17,4 +17,4 @@ jobs:
     - uses: actions/checkout@v2
     - name: .NET Random Pet Name
       id: generate-name
-      uses: cyberbartels/random-pet@main #dotnet/samples/github-actions/DotNet.GitHubAction@main
+      uses: cyberbartels/random-pet@GitHubAction #dotnet/samples/github-actions/DotNet.GitHubAction@main
