@@ -2,25 +2,25 @@ name: '.NET random pet name'
 
 on:
   push:
-    branches: [ main, GitHubAction ]
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
   generate:
-    name: Generate pet name
+    name: Generate Pet Name
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: .NET Random Pet Name
       id: generate-name
-      uses: cyberbartels/random-pet@GitHubAction
+      uses: cyberbartels/random-pet@main
     - name: Check result
       shell: bash
       run: |
         echo ${{ steps.generate-name.outputs.petname }}
     - name: .NET Random Pet Name with Alliteration
       id: generate-name-alliteration
-      uses: cyberbartels/random-pet@GitHubAction
+      uses: cyberbartels/random-pet@main
       with:
         alliteration: b
     - name: Check result
