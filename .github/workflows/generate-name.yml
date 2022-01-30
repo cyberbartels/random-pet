@@ -18,3 +18,7 @@ jobs:
     - name: .NET Random Pet Name
       id: generate-name
       uses: cyberbartels/random-pet@GitHubAction #dotnet/samples/github-actions/DotNet.GitHubAction@main
+    - name: Check result
+      shell: bash
+      run: |
+        echo ${{ steps.generate-name.outputs.petname }}
