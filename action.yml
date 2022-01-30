@@ -3,12 +3,10 @@ description: 'A Github action that creates an random pet name'
 branding:
   icon: sliders
   color: purple
-inputs:
 outputs:
   petname:
     description: 'The generated name.'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
   
