@@ -2,13 +2,8 @@ name: '.NET random pet name'
 
 on:
   push:
-    branches: [ main, GitHubAction ]
+    branches: [ main ]
   workflow_dispatch:
-    inputs:
-      reason:
-        description: 'The reason for running the workflow'
-        required: true
-        default: 'Manual run'
 
 jobs:
   generate:
