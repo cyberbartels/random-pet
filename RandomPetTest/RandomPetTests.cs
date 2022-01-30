@@ -27,5 +27,12 @@ namespace RandomPetTest
             string[] args = new string[0];
             RandomPet.RandomPet.Main(args);
         }
+
+        [Test]
+        public void CanCreateRandomPetStartingWithGivenChar()
+        {
+            string[] args = new string[] { "s" };
+            RandomPet.RandomPet.Main(args);
+        }
     }
 }

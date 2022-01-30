@@ -51,6 +51,9 @@ namespace RandomPetLibTest
         [TestCase('b')]
         [TestCase('c')]
         [TestCase('f')]
+        [TestCase('j')]
+        [TestCase('o')]
+        [TestCase('q')]
         [TestCase('y')]
         public void CanGetAlliteration(char startChar)
         {       
@@ -63,6 +66,12 @@ namespace RandomPetLibTest
 
         [TestCase('x')]
         public void XAsStartCharThrowsArgumentException(char startChar)
+        {
+            Assert.Throws<ArgumentException>(() => petGenerator.NextPet(startChar));
+        }
+
+        [TestCase('z')]
+        public void ZAsStartCharThrowsArgumentException(char startChar)
         {
             Assert.Throws<ArgumentException>(() => petGenerator.NextPet(startChar));
         }
@@ -84,7 +93,7 @@ namespace RandomPetLibTest
 
     public class ShortListTests : DefaultListTests
     {
-        protected string[] petList = new string[] { "Ape", "bear", "cat", "dOg", "frog", "Yak" };
+        protected string[] petList = new string[] { "Ape", "bear", "cat", "dOg", "frog", "Jaguar", "Opossum", "Quail", "Yak" };
         [SetUp]
         public override void Setup()
         {
