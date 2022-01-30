@@ -16,6 +16,6 @@ LABEL com.github.actions.icon="sliders"
 LABEL com.github.actions.color="purple"
 
 # Relayer the .NET SDK, anew with the build output
-FROM mcr.microsoft.com/dotnet/sdk:5.0
+FROM mcr.microsoft.com/dotnet/sdk:3.1
 COPY --from=build-env /out .
 ENTRYPOINT [ "dotnet", "/RandomPet.dll" ]
