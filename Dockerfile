@@ -1,5 +1,5 @@
-# Set the base image as the .NET 3.1 SDK (this includes the runtime)
-FROM mcr.microsoft.com/dotnet/sdk:3.1 as build-env
+# Set the base image as the .NET 8 SDK (this includes the runtime)
+FROM mcr.microsoft.com/dotnet/sdk:8.0.303-jammy as build-env
 
 # Copy everything and publish the release (publish implicitly restores and builds)
 COPY . ./
@@ -16,6 +16,6 @@ LABEL com.github.actions.icon="sliders"
 LABEL com.github.actions.color="purple"
 
 # Relayer the .NET SDK, anew with the build output
-FROM mcr.microsoft.com/dotnet/sdk:3.1
+FROM mcr.microsoft.com/dotnet/sdk:8.0.303-jammy
 COPY --from=build-env /out .
 ENTRYPOINT [ "dotnet", "/RandomPet.dll" ]
