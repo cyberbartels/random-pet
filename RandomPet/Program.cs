@@ -29,8 +29,10 @@ namespace RandomPet
                 petName = p.NextPet(startLetter.ToCharArray()[0]);
             }
 
-            Console.WriteLine($"petname={petName}");
+            //Log result
+            Console.WriteLine($"petname={petName}"); 
             
+            //Create action output
             var gitHubOutputFile = Environment.GetEnvironmentVariable("GITHUB_OUTPUT");
             if (!string.IsNullOrWhiteSpace(gitHubOutputFile))
             {
