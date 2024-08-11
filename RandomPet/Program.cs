@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Xml.Linq;
 using RandomPetLib;
 
 namespace RandomPet
@@ -25,8 +27,7 @@ namespace RandomPet
                 petName = p.NextPet(startLetter.ToCharArray()[0]);
             }
 
-            Console.WriteLine($"::set-output name=petname::{petName}");
-           // Console.ReadKey(); 
+            Console.WriteLine($"\"petname={{petName}}\" >> $GITHUB_OUTPUT");
         }
     }
 }
