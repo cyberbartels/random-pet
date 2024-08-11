@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Text;
 using System.Xml.Linq;
 using RandomPetLib;
 
@@ -27,7 +29,15 @@ namespace RandomPet
                 petName = p.NextPet(startLetter.ToCharArray()[0]);
             }
 
-            Console.WriteLine($"\"petname={{petName}}\" >> $GITHUB_OUTPUT");
+            Console.WriteLine($"petname={petName}");
+            
+            var gitHubOutputFile = Environment.GetEnvironmentVariable("GITHUB_OUTPUT");
+            if (!string.IsNullOrWhiteSpace(gitHubOutputFile))
+            {
+                using StreamWriter textWriter = new(gitHubOutputFile, true, Encoding.UTF8);
+                textWriter.WriteLine($"petname={petName}");
+            }
+
         }
     }
 }
