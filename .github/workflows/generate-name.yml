@@ -13,14 +13,14 @@ jobs:
     - uses: actions/checkout@v4
     - name: .NET Random Pet Name
       id: generate-name
-      uses: cyberbartels/random-pet@Update-action-workflow
+      uses: cyberbartels/random-pet@main
     - name: Check result
       shell: bash
       run: |
         echo ${{ steps.generate-name.outputs.petname }}
     - name: .NET Random Pet Name with Alliteration
       id: generate-name-alliteration
-      uses: cyberbartels/random-pet@Update-action-workflow
+      uses: cyberbartels/random-pet@main
       with:
         alliteration: b
     - name: Check result
