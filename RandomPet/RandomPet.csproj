@@ -7,7 +7,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RandomPetLib\RandomPetLib.csproj" />
-    <ProjectReference Include="..\RandomPetLib\RandomPetLib\RandomPetLib.csproj" />
   </ItemGroup>
 
 </Project>
